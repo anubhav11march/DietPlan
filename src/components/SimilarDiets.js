@@ -40,7 +40,8 @@ const SimilarDiets = ({diet,quantity,from,value,nutritionPref,margin}) => {
             }
         }
 
-        })()
+        })() 
+//eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
    
   similarDiets.sort((a,b)=>
