@@ -140,14 +140,15 @@ const AllDietTable = () => {
     {
         setFilter({
             fn:items=>{
-                if(target.value == "")
+                if(target.value === "")
                 return items
                 else
                 {
                     return items.filter(item=>{
                      
                         if(item.name===null || item.email===null )
-                        return 
+                        return null
+
                         return (item.name.toLowerCase()).includes(target.value.toLowerCase()) ||(item.email.toLowerCase()).includes(target.value.toLowerCase())   } )
                     
                 }
