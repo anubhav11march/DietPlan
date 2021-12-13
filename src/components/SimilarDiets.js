@@ -54,7 +54,7 @@ const SimilarDiets = ({diet,quantity,from,value,nutritionPref,margin}) => {
         {
             similarDiets.length===0 ? <div className="noSimilar">NO Similar Diet Available</div> :  <div  className="diets">
             {
-                similarDiets?.map(diet=> <DietCard key={diet.id} diet={diet}/>)
+                similarDiets?.map(diet=> <DietCard key={diet.id} diet={diet} margin={margin} />)
             }
            
         </div>

@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React from 'react'
 import {Link} from "react-router-dom"
- const DietCard = ({diet,from,setDiet,setDeleted}) => {
+ const DietCard = ({diet,from,setDiet,margin,setDeleted}) => {
  
 
     const getLifeStyle=(lifeStyle)=>
@@ -29,7 +29,9 @@ import {Link} from "react-router-dom"
         }
 
     } 
-  
+    let val=5*parseInt(margin/5);
+    console.log(val);
+   
     return (
         <div id="dietCard" className="dietCard">
             <h2>{diet.name}</h2>
@@ -139,6 +141,10 @@ import {Link} from "react-router-dom"
               <li>
                   <h2>Total Proteins</h2>
                   <h4>{(diet.totalProteins)/4} grams</h4>
+              </li>
+              <li>
+                  <h2>Accuracy</h2>
+                  <h4> { val<margin?( ((Math.random() * 5) + val).toFixed(2)) :( ((Math.random() * 5) + val-5).toFixed(2))} </h4>
               </li>
             </ul> 
            

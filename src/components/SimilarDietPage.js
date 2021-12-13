@@ -57,7 +57,7 @@ const SimilarDietPage = () => {
 
     
      {
-        isShow && <SimilarDiets value={value} quantity={limits}  diet={diet}  nutritionPref={nutritionPref}  />
+        isShow && <SimilarDiets value={value} quantity={limits}  diet={diet} margin={margin} nutritionPref={nutritionPref}  />
     }
     </div>
     </>
